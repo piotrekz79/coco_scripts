@@ -1,0 +1,17 @@
+To run TNO North topology, start
+./mntn.sh
+
+then to add initial configuration (BGP flows, GRE), run
+./tnflows_gw.sh
+
+
+To run TNO North topology, start
+./mnts.sh
+
+then to add initial configuration (BGP flows, GRE), run
+./tsflows_gw.sh
+
+
+Note: GRE tunnel endpoints configured in t?flows_gw.sh are likely to be reconfigured
+
+
