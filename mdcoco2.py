@@ -241,6 +241,7 @@ class MDCoCoTopoSouth(Topo):
         ts_pe1 = self.addSwitch('ts-pe1', dpid='0000000000000001', datapath='user')
 #        ts_pc1 = self.addSwitch('ts-pc1', dpid='0000000000000002')
 #        ts_pe2 = self.addSwitch('ts-pe2', dpid='0000000000000003')
+        ts_gw_tn = self.addSwitch('ts-gw-tn', dpid='0000000000000024')
 
         pinghost = self.addHost('ts-ph-tn', cls=PingableHost, ip='10.0.0.4/24', mac='00:10:00:00:00:04', remoteIP='10.0.0.3', remoteMAC='00:10:00:00:00:03')
         self.addLink(ts_pe1, pinghost)
@@ -327,7 +328,8 @@ class MDCoCoTopoSouth(Topo):
 
         # Wire up the switches in the topology
         ##for a moment only one switch is present in TNO south
-        #self.addLink( ts_pe1, ts_pc1 )
+        self.addLink( ts_pe1, ts_gw_tn )
+
         #self.addLink( ts_pc1, ts_pe2 )
 
 

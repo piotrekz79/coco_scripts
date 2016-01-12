@@ -22,5 +22,7 @@ router bgp 65020
  neighbor 10.2.0.1 activate
  neighbor 10.2.0.2 activate
  neighbor 10.3.0.254 activate
+!TODO offload it po quagga-adaptor!
+ neighbor 10.3.0.254 route-map 1 out
  exit-address-family
 log stdout
